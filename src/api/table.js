@@ -7,3 +7,11 @@ export function getList(params) {
     params
   })
 }
+
+export function getDeptTree(params) {
+  return fetch({
+    url: '/dept/tree',
+    method: 'get',
+    params
+  })
+}
