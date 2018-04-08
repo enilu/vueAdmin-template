@@ -14,7 +14,7 @@
           <sidebar-item class='menu-indent' v-if='child.children&&child.children.length>0' :routes='[child]'> </sidebar-item>
           <router-link v-else class="menu-indent" :to="item.path+'/'+child.path">
             <el-menu-item :index="item.path+'/'+child.path">
-              {{child.name}}
+              <icon-svg v-if='child.icon' :icon-class="child.icon" />  {{child.name}}
             </el-menu-item>
           </router-link>
         </template>
